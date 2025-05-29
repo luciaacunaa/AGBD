@@ -132,3 +132,6 @@ UPDATE actor SET first_name = 'FITO', last_name = 'PAEZ' WHERE actor_id = 3;
 
 /*Ejercicio 21*/
 DELETE FROM actor WHERE actor_id IN (201, 202, 203);
+
+INSERT INTO city (city_name)
+VALUES ('Buenos Aires');
