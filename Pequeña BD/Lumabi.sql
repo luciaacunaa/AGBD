@@ -147,3 +147,17 @@ VALUES (1, 1, 'Pastas', 'Agua'),
 (7, 7, 'Pizzas', 'Jugos'), 
 (8, 8, 'Pizzas', 'Bebidas Alcoholicas'), 
 (9, 9, 'Especial de la Casa', 'Bebidas Alchoholicas');
+
+--Actualizar datos
+SELECT employees_id, first_name, last_name FROM employees
+WHERE first_name IN ('Federico', 'Tomas', 'Julian'); 
+UPDATE employees set first_name = 'Eduardo', last_name = 'Basille' WHERE employees_id = 1;
+UPDATE employees set first_name = 'Marcela', last_name = 'Gleiser' WHERE employees_id = 2;
+UPDATE employees set first_name = 'Diego', last_name = 'Lopez' WHERE employees_id = 3;
+
+--Borrar datos
+DELETE FROM customers WHERE customer_id IN (8, 9, 10);
+
+--INNER JOIN
+SELECT m.meals_name, m.price, p.payment_id FROM meals m 
+INNER JOIN payment p ON m.meals_id = p.payment_id
